@@ -48,6 +48,9 @@
     <style>{{ .Content | safeCSS }}</style>
   {{ end }}
 
+  <!-- 自定义样式 -->
+  <link rel="stylesheet" href="/css/custom.css">
+
   {{ range .Site.Params.extraCSSFiles -}}
   <link rel="stylesheet" href="{{ $.Site.Params.staticPrefix }}{{ . | relURL }}">
   {{- end }}
